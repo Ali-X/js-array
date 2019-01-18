@@ -1,1 +1,1 @@
-# [Github page](https://ali-x.github.io/js-cycle/)
+# [Github page](https://ali-x.github.io/js-array/)
