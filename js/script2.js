@@ -25,7 +25,7 @@ let auto = {
   runAuto: function () {
     if (this.isIgnited()) {
       this.run = true;
-      console.log("Машина " + auto.brand + " марки " + auto.color + " цвета поехала!");
+      console.log("Машина " + this.brand + " марки " + this.color + " цвета поехала!");
     } else {
       console.log("Включите вначале зажигание");
     }
