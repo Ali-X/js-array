@@ -1,4 +1,4 @@
-let arr = [5, 3, 0, 11, 30];
+let arr = [1, 2, 3, 4];
 
 function getSubArrays(arr) {
   let newArr = [];
