@@ -1,6 +1,20 @@
 let arr = [43, 23, 57, 54, 60, 41, 10, 60, 23, 47, 60, 12, 59];
 let arrLength = arr.length;
-let bestResult = Math.max.apply(Math, arr);
+let bestResult = getBestResult();
+
+function getBestResult() {
+  let bestResult = Number.MIN_VALUE;
+
+  for (let i = 0; i < arrLength; i++) {
+    let arrElement = arr[i];
+
+    if (arrElement > bestResult) {
+      bestResult = arrElement;
+    }
+  }
+
+  return bestResult;
+}
 
 function getGeneralInfo() {
   for (let i = 0; i < arrLength; i++) {
@@ -11,7 +25,7 @@ function getGeneralInfo() {
   console.log("Наилучший результат: " + bestResult);
 }
 
-function getBestResult() {
+function getBestResultNumbers() {
   let bestResultNumbers = [];
 
   for (let i = 0; i < arrLength; i++) {
@@ -25,4 +39,4 @@ function getBestResult() {
 }
 
 getGeneralInfo();
-getBestResult();
+getBestResultNumbers();
