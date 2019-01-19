@@ -6,51 +6,45 @@ let auto = {
   ignited: false,
   run: false,
   fuel: 0,
+  isIgnited: function () {
+    return this.ignited;
+  },
+  hasFuel: function () {
+    return this.fuel !== 0;
+  },
+  addFuel: function () {
+    this.fuel = 100;
+  },
+  ignite: function () {
+    if (this.hasFuel()) {
+      this.ignited = true;
+    } else {
+      console.log("Hужно заправить автомобиль");
+    }
+  },
+  runAuto: function () {
+    if (this.isIgnited()) {
+      this.run = true;
+      console.log("Машина " + auto.brand + " марки " + auto.color + " цвета поехала!");
+    } else {
+      console.log("Включите вначале зажигание");
+    }
+  },
+  stop: function () {
+    if (this.isIgnited()) {
+      this.run = false;
+      this.ignited = false;
+      console.log("Машинка остановилась");
+    } else {
+      console.log("Зажигание и так выключено");
+    }
+  }
 };
 
-function isIgnited() {
-  return auto.ignited;
-}
-
-function hasFuel() {
-  return auto.fuel !== 0;
-}
-
-function addFuel() {
-  auto.fuel = 100;
-}
-
-function ignite() {
-  if (hasFuel()) {
-    auto.ignited = true;
-  } else {
-    console.log("Hужно заправить автомобиль");
-  }
-}
-
-function run() {
-  if (isIgnited()) {
-    auto.run = true;
-    console.log("Машина " + auto.brand + " марки " + auto.color + " цвета поехала!");
-  } else {
-    console.log("Включите вначале зажигание");
-  }
-}
-
-function stop() {
-  if (isIgnited()) {
-    auto.run = false;
-    auto.ignited = false;
-    console.log("Машинка остановилась");
-  } else {
-    console.log("Зажигание и так выключено");
-  }
-}
-
-ignite();
-addFuel();
-run();
-ignite();
-run();
-stop();
-stop();
+auto.ignite();
+auto.addFuel();
+auto.runAuto();
+auto.ignite();
+auto.runAuto();
+auto.stop();
+auto.stop();
