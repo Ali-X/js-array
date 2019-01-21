@@ -1,3 +1,4 @@
+'use strict';
 let str = "А роза упала на лапу Азора";
 
 function isPalindrom(str) {

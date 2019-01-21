@@ -1,3 +1,4 @@
+'use strict';
 let arr = [1, 2, 3, 4];
 
 function getSubArrays(arr) {

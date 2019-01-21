@@ -1,3 +1,4 @@
+'use strict';
 let arr = [5, 3, 0, 11, 30];
 
 function getMax(arr) {

@@ -1,3 +1,4 @@
+'use strict';
 let arr = [5, 10, 9, 0, 1];
 
 function getRandomInt(min, max) {

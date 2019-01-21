@@ -1,3 +1,4 @@
+'use strict';
 let arr = [43, 23, 57, 54, 60, 41, 10, 60, 23, 47, 60, 12, 59];
 let arrLength = arr.length;
 let bestResult = getBestResult();

@@ -1,3 +1,4 @@
+'use strict';
 let auto = {
   brand: 'BMW',
   year: 2003,
